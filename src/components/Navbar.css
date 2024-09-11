@@ -1,0 +1,64 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  width: 100%;
+}
+
+/* Align the "Learn More" link to the left */
+.expand-info-link {
+  background-color: transparent;
+  border: none;
+  color: #ff5733;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  margin-right: auto; /* Push everything else to the right */
+}
+
+/* Logo styling */
+.navbar-logo img {
+  height: 50px;
+  margin-left: 20px;
+}
+
+/* Horizontal navbar links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 80px;
+  margin-left: auto;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* Button styling */
+.navbar-btn .btn {
+  background-color: #ff5733;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* Extra information box */
+.extra-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
