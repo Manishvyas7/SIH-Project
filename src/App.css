@@ -62,7 +62,7 @@ body {
 .card {
   background-color: #1a1a1a; /* Darker background for cards */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2); /* Subtle neon effect */
+  box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2); /* Subtle neon effect */
   width: 300px;
   overflow: hidden;
   transition: transform 0.3s ease;

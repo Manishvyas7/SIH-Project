@@ -1,0 +1,60 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li 
+  {
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .head
+  {
+    font-size: 21px;
+    font-weight: 600;
+  }
+  
+  .modal-content {
+    background-color: black;
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px;
+    width: 800px;
+    height: auto;
+  }
+  .buttons 
+  {
+    margin-left: 175px;
+  }
+  .buttons .btn
+  {
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: #00ffff;
+    border-radius: 10px;
+    margin-left: 25px;
+  }
+  .buttons .btn:hover
+  {
+    box-shadow: 0 0 0 2px #39ffff;
+  }
+  
+  .document-upload-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }

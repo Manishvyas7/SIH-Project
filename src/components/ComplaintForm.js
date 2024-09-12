@@ -1,17 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './ComplaintForm.css';
-
-// Sample images for demonstration
-import cyberCrimeImage from './assets/cybercrime.jpg'; 
+import cyberCrimeImage from './assets/cybercrime.jpg';
 import financialCrimeImage from './assets/financialcrime.jpg';
 import identityTheftImage from './assets/identitytheft.jpg';
+import InstructionModal from './InstructionModal'; // Import the modal
 
 const ComplaintForm = () => {
   const navigate = useNavigate();
+  const [crimeType, setCrimeType] = useState(null); // Track the crime type for the modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Function to handle image click and navigate to specific forms
-  const handleImageClick = (crimeType) => {
+  // Function to handle image click and show the modal
+  const handleImageClick = (type) => {
+    setCrimeType(type); // Set the crime type
+    setIsModalOpen(true); // Open the modal
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCrimeType(null);
+  };
+
+  // Function to navigate to the respective form
+  const navigateToForm = () => {
     navigate('/complaint-form/${crimeType}');
   };
 
@@ -19,14 +32,12 @@ const ComplaintForm = () => {
     <div className="complaint-form-page">
       <h2>Complaint Types</h2>
 
-      {/* Paragraph in bullet points */}
       <ul className="info-list">
         <li>Ensure that all details regarding your complaint are accurate.</li>
         <li>Provide any supporting evidence, such as screenshots, documents, or other media.</li>
         <li>Choose the appropriate category for your complaint before proceeding.</li>
       </ul>
 
-      {/* Display clickable images */}
       <div className="photos-section">
         <div className="image-container" onClick={() => handleImageClick('cyber-crime')}>
           <img src={cyberCrimeImage} alt="Cyber Crime" className="crime-image" />
@@ -41,6 +52,15 @@ const ComplaintForm = () => {
           <p>Identity Theft</p>
         </div>
       </div>
+
+      {/* Show the modal if it's open */}
+      {isModalOpen && (
+        <InstructionModal
+          crimeType={crimeType}
+          closeModal={closeModal}
+          navigateToForm={navigateToForm}
+        />
+      )}
     </div>
   );
 };

@@ -1,154 +1,73 @@
-.learn-more-container {
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .learn-more-left {
-    flex: 1;
-  }
-  
-  .learn-more-btn {
-    background-color: #00ffff;
-    color: #111;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .learn-more-btn:hover {
-    background-color: #00cccc;
-    transform: scale(1.1);
-  }
-  
-  .learn-more-right {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .social-media-links {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    align-items: center; /* Align icons and text */
-  }
-  
-  .social-media-links li {
-    display: flex;
-    align-items: center;
-  }
-  
-  .social-media-links a {
-    color: #00ffff;
-    text-decoration: none;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
-  }
-  
-  .social-media-links a:hover {
-    color: #00cccc;
-  }
-  
-  .social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px; /* Space between icon and text */
-  }
-  
-  .extra-info {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ddd;
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
-    text-align: left;
-  }
-  .learn-more-container {
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .learn-more-left {
-    flex: 1;
-  }
-  
-  .learn-more-btn {
-    background-color: #00ffff;
-    color: #111;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .learn-more-btn:hover {
-    background-color: #00cccc;
-    transform: scale(1.1);
-  }
-  
-  .learn-more-right {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .social-media-links {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
-    align-items: center; /* Align icons and text */
-  }
-  
-  .social-media-links li {
-    display: flex;
-    align-items: center;
-  }
-  
-  .social-media-links a {
-    color: #00ffff;
-    text-decoration: none;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s ease;
-  }
-  
-  .social-media-links a:hover {
-    color: #00cccc;
-  }
-  
-  .social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px; /* Space between icon and text */
-  }
-  
-  .extra-info {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ddd;
-    padding: 15px;
-    margin-top: 15px;
-    border-radius: 8px;
-    text-align: left;
-  }
+.flag-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; Ensure the icons and text are on opposite sides */
+  margin-bottom: 10px; /* Adjust spacing if needed */
+}
+
+.india-flag {
+  width: 25px;  /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+.gov-notice {
+  font-size: 14px;
+  color: white;
+  margin-right: 10px; /* Add some spacing between the text and the button */
+  display: inline-block;
+  /* padding-right: 71% ; */
+  width : 90%;
+}
+
+.learn-more-container{
+  display: flex;
+}
+
+.learn-more-left {
+  margin-left: 0;
+  display: inline-block; /* Ensure the button is inline with the text */
+  vertical-align: middle; /* Align the button vertically with the text */
+  padding-right: 30%;
+  padding-bottom: 4px;
+}
+
+.learn-more-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Smaller padding for a smaller button */
+  font-size: 12px;   /* Smaller font size */
+  border-radius: 30px; /* Adjust border radius for a smaller button */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px; /* Adjust margin to keep button closer to the text */
+  /* padding-bottom: 20px; */
+  /* padding-right: 50px; */
+}
+
+.learn-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style for aligning the social media icons on the right */
+.social-media-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end; /* Align icons to the right */
+  padding: 0;
+  margin: 0;
+}
+
+.social-media-links li {
+  margin-left: 15px; /* Adjust spacing between the icons */
+}
+
+.social-icon {
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #1da1f2;
+}

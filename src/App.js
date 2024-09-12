@@ -8,6 +8,7 @@ import ComplaintForm from './components/ComplaintForm';
 import CyberCrimeForm from './components/CyberCrimeForm';
 import FinancialCrimeForm from './components/FinancialCrimeForm';
 import IdentityTheftForm from './components/IdentityTheftForm';
+import InstructionPage from './components/InstructionPage'; // Import the InstructionPage component
 import logo from './components/assets/logo.jpeg';
 import LearnMore from './components/LearnMore';
 import Card1 from './components/assets/Card 1.png';
@@ -38,7 +39,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <LearnMore/>
+        <LearnMore />
         <Navbar />
         <Routes>
           <Route
@@ -78,11 +79,16 @@ function App() {
               </>
             }
           />
+
+          {/* Routes for various complaint forms */}
           <Route path="/complaint-now" element={<Complaint />} />
           <Route path="/complaint-form" element={<ComplaintForm />} />
           <Route path="/complaint-form/cyber-crime" element={<CyberCrimeForm />} />
           <Route path="/complaint-form/financial-crime" element={<FinancialCrimeForm />} />
           <Route path="/complaint-form/identity-theft" element={<IdentityTheftForm />} />
+
+          {/* Route for dynamic instruction pages */}
+          <Route path="/instructions/:crimeType" element={<InstructionPage />} />
         </Routes>
       </div>
     </Router>

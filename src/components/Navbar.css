@@ -21,7 +21,7 @@
 
 /* Logo styling */
 .navbar-logo img {
-  height: 50px;
+  height: 100px;
   margin-left: 20px;
 }
 
@@ -29,25 +29,38 @@
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 80px;
-  margin-left: auto;
+  gap: 70px;
+  margin-left: 0px;
 }
 
 .navbar-links a {
   text-decoration: none;
   color: white;
   font-size: 16px;
+  transition: .3s;
+}
+.navbar-links a:hover
+{
+  color: #00ffff;
+  font-size: 20px;
 }
 
 /* Button styling */
 .navbar-btn .btn {
-  background-color: #ff5733;
+  background-color: red;
   padding: 10px 20px;
   color: white;
   border: none;
   text-decoration: none;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 38px;
+  border-radius: 5px;
+
+}
+.navbar-btn .btn:hover {
+  /* box-shadow: 0 0 0 2px white; */
+  background-color: #00ffff;
+  color: black;
 }
 
 /* Extra information box */

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './LearnMore.css';
-import facebookLogo from './assets/facebook-logo.jpg'; // Ensure correct path
-import twitterLogo from './assets/twitter-logo.jpg';
-import linkedinLogo from './assets/linkedin-logo.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import indiaFlag from './assets/india-flag.jpg';  // Add path to India flag image
 
 const LearnMore = () => {
   const [isInfoVisible, setIsInfoVisible] = useState(false);
@@ -12,12 +12,22 @@ const LearnMore = () => {
   };
 
   return (
+    <div>
     <div className="learn-more-container">
-      {/* Left Side: Learn More Button */}
+      {/* Top Section: India Flag and Government Notice */}
+      <div className="flag-container">
+        <img src={indiaFlag} alt="India Flag" className="india-flag" />
+        <div className="gov-notice">
+          An official website of the Indian Government
+        </div>
+      </div>
+
+      {/* Learn More Button */}
       <div className="learn-more-left">
         <button className="learn-more-btn" onClick={toggleInfoVisibility}>
-          {isInfoVisible ? 'Hide Info' : 'Learn More'}
+          {isInfoVisible ? 'Hide Info' : 'Here"s how you know!!'}
         </button>
+      </div>
       </div>
 
       {/* Right Side: Social Media Links */}
@@ -25,35 +35,34 @@ const LearnMore = () => {
         <ul className="social-media-links">
           <li>
             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={facebookLogo} alt="Facebook" className="social-icon" />
-              
+              <FontAwesomeIcon icon={faFacebookF} className="social-icon" />
             </a>
           </li>
           <li>
             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src={twitterLogo} alt="Twitter" className="social-icon" />
-              
+              <FontAwesomeIcon icon={faTwitter} className="social-icon" />
             </a>
           </li>
           <li>
             <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <img src={linkedinLogo} alt="LinkedIn" className="social-icon" />
-              
+              <FontAwesomeIcon icon={faLinkedin} className="social-icon" />
             </a>
           </li>
         </ul>
       </div>
+      <hr></hr>
 
       {/* Additional Info (Toggled) */}
       {isInfoVisible && (
         <div className="extra-info">
           <p>
-            Welcome to our cyber security platform. We are dedicated to providing top-notch protection against
-            cyber threats. Our goal is to safeguard your personal and business data in this digital era.
+            This is an informational message about our services. We provide cybersecurity solutions to ensure
+            the safety and protection of your digital assets. Reach out to us for more details.
           </p>
         </div>
       )}
     </div>
+    
   );
 };
 

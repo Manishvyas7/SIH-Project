@@ -16,7 +16,7 @@ const Navbar = () => {
         <li><Link to="/our-records">Our Records</Link></li>
         <li><Link to="/awareness-camp">Awareness Camp</Link></li>
         <li><Link to="/faq">FAQ's</Link></li>
-        <li><Link to="/helpline-no">Helpline No</Link></li>
+        {/* <li><Link to="/helpline-no">Helpline No</Link></li> */}
       </ul>
       <div className="navbar-btn">
         <Link to="/complaint-now" className="btn">Complaint Now</Link> {/* Updated to Link */}
