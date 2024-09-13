@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './Complaint.css';
 
 // Sample images for demonstration
-import sampleImage1 from './assets/sample1.png'; // Ensure correct path
+import sampleImage1 from './assets/cybercrime3.jpeg'; // Ensure correct path
 import sampleImage2 from './assets/sample2.jpg'; 
+
 
 const Complaint = () => {
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
@@ -14,7 +15,7 @@ const Complaint = () => {
 
   return (
     <div className="complaint-page">
-      <h2>Complaint Information</h2>
+      <h2>What is Cyber Crime?</h2>
 
       {/* Display photos */}
       <div className="photos-section">
@@ -23,12 +24,17 @@ const Complaint = () => {
       </div>
 
       {/* Paragraph in bullet points */}
-      <ul className="info-list">
-        <li>Provide details of your complaint clearly and concisely.</li>
-        <li>Include any relevant evidence or documents to support your complaint.</li>
-        <li>Ensure that all required fields in the form are filled out accurately.</li>
-        <li>Be honest and provide accurate information to facilitate a smooth process.</li>
-      </ul>
+      <div>
+          {/* <h2 className="info-title">What is Cyber Crime?</h2> */}
+          <p className="info-text">
+            Cyber crime refers to criminal activities carried out by means of computers or the Internet. 
+            It includes anything from downloading illegal music files to stealing millions of dollars from online bank accounts.
+          </p>
+          <p className="info-text">
+            Cyber crime also includes non-monetary offenses, such as creating and distributing viruses on other computers 
+            or posting confidential business information on the Internet.
+          </p>
+        </div>
 
       {/* Checkbox to reveal form link */}
       <div className="checkbox-section">

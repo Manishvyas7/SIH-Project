@@ -1,0 +1,60 @@
+/* Footer.css */
+
+.footer-section {
+    background-color: #0d0d0d; /* Dark background to match the website theme */
+    color: #fff; /* Light text color for contrast */
+    padding: 32px 16px; /* Equivalent to py-8 px-4 */
+}
+
+.footer-container {
+    max-width: 96rem; /* Equivalent to max-w-6xl */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row; /* Equivalent to md:flex-row */
+    }
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px; /* Equivalent to mb-4 */
+}
+
+@media (min-width: 768px) {
+    .footer-logo {
+        margin-bottom: 0; /* Equivalent to md:mb-0 */
+    }
+}
+
+.footer-icon {
+    height: 2rem; /* Equivalent to h-8 */
+    width: 2rem; /* Equivalent to w-8 */
+    margin-right: 8px; /* Equivalent to mr-2 */
+    color: #00ffff; /* Neon cyan to match the theme */
+}
+
+.footer-title {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: 700; /* Equivalent to font-bold */
+    color: #00ffff; /* Neon cyan text for consistency */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Glowing effect */
+}
+
+.footer-info {
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    text-align: center;
+    color: #ddd; /* Light gray for readability */
+}
+
+@media (min-width: 768px) {
+    .footer-info {
+        text-align: left;
+    }
+}

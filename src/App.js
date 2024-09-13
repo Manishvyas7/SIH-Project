@@ -8,12 +8,14 @@ import ComplaintForm from './components/ComplaintForm';
 import CyberCrimeForm from './components/CyberCrimeForm';
 import FinancialCrimeForm from './components/FinancialCrimeForm';
 import IdentityTheftForm from './components/IdentityTheftForm';
-import InstructionPage from './components/InstructionPage'; // Import the InstructionPage component
+import InstructionPage from './components/InstructionPage'; 
 import logo from './components/assets/logo.jpeg';
 import LearnMore from './components/LearnMore';
 import Card1 from './components/assets/Card 1.png';
+import AboutUs from './components/AboutUs'; // Import AboutUs component
 import './App.css';
-import './AboutUs.css';
+import UsefulLinks from './components/UsefulLinks';
+import Footer from './components/Footer';
 
 function App() {
   const cards = [
@@ -25,14 +27,14 @@ function App() {
     {
       id: 2,
       image: logo,
-      title: 'Card 2',
-      description: 'This is the second card.',
+      title: 'Cyber Crime',
+      description: 'Report any cyber-related incidents.',
     },
     {
       id: 3,
       image: logo,
-      title: 'Card 3',
-      description: 'This is the third card.',
+      title: 'Identity Theft',
+      description: 'Secure your identity by reporting theft.',
     },
   ];
 
@@ -42,52 +44,40 @@ function App() {
         <LearnMore />
         <Navbar />
         <Routes>
+          {/* Home page route */}
           <Route
             path="/"
             element={
               <>
                 <Slider />
-                <div className="card-container">
+                <Card/>
+                {/* <div className="card-container">
                   {cards.map((card) => (
                     <Card
                       key={card.id}
                       image={card.image}
                       title={card.title}
                       description={card.description}
-                    />
-                  ))}
-                </div>
-                {/* About Us Section */}
-                <section className="about-us">
-                  <div className="about-content">
-                    <div className="logo-space">
-                      <img src={logo} alt="Company Logo" />
-                    </div>
-                    <div className="about-text">
-                      <h2>About Us</h2>
-                      <p>
-                        Welcome to our cyber security platform, your trusted ally in the fight against cyber crime. 
-                        Our mission is to protect individuals, businesses, and governments from the growing threat of cyber attacks.
-                      </p>
-                      <p>
-                        With a team of experts, cutting-edge technology, and a passion for keeping cyberspace secure, 
-                        we are committed to safeguarding your data and privacy in a digital world.
-                      </p>
-                    </div>
-                  </div>
-                </section>
+                    /> */}
+                  {/* ))}
+                </div> */}
+                {/* About Us Section, added after cards */}
+                <AboutUs />
+                <br/>
+                <UsefulLinks/>
+                <br/>
+                <Footer/>
               </>
             }
           />
-
-          {/* Routes for various complaint forms */}
+          {/* Complaint and forms routes */}
+          <Route path="/theft-form" element={<IdentityTheftForm />} />
+          <Route path="/financial-crime-form" element={<FinancialCrimeForm />} />
+          <Route path="/cyber-crime-form" element={<CyberCrimeForm />} />
           <Route path="/complaint-now" element={<Complaint />} />
           <Route path="/complaint-form" element={<ComplaintForm />} />
-          <Route path="/complaint-form/cyber-crime" element={<CyberCrimeForm />} />
-          <Route path="/complaint-form/financial-crime" element={<FinancialCrimeForm />} />
-          <Route path="/complaint-form/identity-theft" element={<IdentityTheftForm />} />
 
-          {/* Route for dynamic instruction pages */}
+          {/* Dynamic route for instruction pages based on crime type */}
           <Route path="/instructions/:crimeType" element={<InstructionPage />} />
         </Routes>
       </div>

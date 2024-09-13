@@ -1,0 +1,62 @@
+/* AboutUs.css */
+
+.about-section {
+    padding: 48px 16px;
+    background-color: #0d0d0d; /* Dark background to match the site */
+    color: #fff; /* White text */
+  }
+  
+  .about-container {
+    max-width: 64rem; /* Same width for layout */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-icon {
+    height: 4rem;
+    width: 4rem;
+    color: #00ffff; /* Neon cyan to match the rest of the theme */
+    margin: 0 auto 16px;
+  }
+  
+  .about-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #00ffff; /* Neon cyan for the title */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Glowing effect on headings */
+    margin-bottom: 16px;
+  }
+  
+  .about-description {
+    color: #ddd; /* Light gray for description text */
+    margin-bottom: 32px;
+  }
+  
+  .about-features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .about-features {
+      grid-template-columns: repeat(3, 1fr); /* Responsive layout for features */
+    }
+  }
+  
+  .about-feature-card {
+    background-color: #1a1a1a; /* Dark background for cards to match the theme */
+    padding: 16px;
+    border-radius: 0.375rem;
+    box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2); /* Subtle neon effect */
+    transition: transform 0.3s ease;
+  }
+  
+  .about-feature-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .about-feature-title {
+    font-weight: 600;
+    color: #00ffff; /* Neon cyan for feature titles */
+  }

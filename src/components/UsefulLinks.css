@@ -1,0 +1,58 @@
+/* UsefulLinks.css */
+
+.useful-links-section {
+    padding: 48px 16px;
+    background-color: #0d0d0d; /* Dark background to match the website theme */
+}
+
+.useful-links-title {
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    font-weight: 700; /* Equivalent to font-bold */
+    color: #00ffff; /* Neon cyan to match the theme */
+    text-align: center;
+    margin-bottom: 32px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Glowing effect */
+}
+
+.useful-links-grid {
+    max-width: 96rem; /* Equivalent to max-w-6xl */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Equivalent to grid-cols-2 */
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .useful-links-grid {
+        grid-template-columns: repeat(4, 1fr); /* Equivalent to md:grid-cols-4 */
+    }
+}
+
+.useful-link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px; /* Equivalent to p-4 */
+    background-color: #1a1a1a; /* Dark background for the cards */
+    border-radius: 0.75rem; /* Equivalent to rounded-lg */
+    transition: box-shadow 0.3s ease-in-out;
+    color: #fff; /* Light text color for contrast */
+}
+
+.useful-link-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.3); /* Neon glow on hover */
+}
+
+.useful-link-image {
+    width: 4rem; /* Equivalent to w-16 */
+    height: 4rem; /* Equivalent to h-16 */
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.useful-link-text {
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    font-weight: 500; /* Equivalent to font-medium */
+    color: #00ffff; /* Neon cyan text */
+    text-align: center;
+}

@@ -1,34 +1,52 @@
-/* Card.css */
+/* Cards.css */
 
-.card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    text-align: center;
-    margin-bottom: 20px; /* Add space between the cards */
-  }
-  
-  .card:hover {
-    transform: scale(1.1);
-  }
-  
-  .card img {
-    width: 100%;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
+.crime-cards-section {
+  padding: 48px 16px;
+  background-color: #0d0d0d; /* Matches the dark background of the site */
+}
 
+.crime-cards-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .crime-cards-container {
+      grid-template-columns: repeat(3, 1fr);
   }
-  
-  .card h3 {
-    margin: 10px 0;
-    font-size: 1.5em;
-  }
-  
-  .card p {
-    padding: 0 15px;
-    color: #666;
-  }
-  
+}
+
+.crime-card {
+  background-color: #1a1a1a; /* Matches the darker card background from App.css */
+  border-radius: 0.75rem; /* Rounded corners */
+  padding: 24px; /* Padding inside the card */
+  box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2); /* Subtle neon glow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  color: #ddd; /* Light text color */
+}
+
+.crime-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3); /* Brighter neon glow on hover */
+}
+
+.card-icon {
+  height: 3rem; /* Icon size */
+  width: 3rem; /* Icon size */
+  color: #00ffff; /* Neon cyan to match the theme */
+  margin-bottom: 16px;
+}
+
+.card-title {
+  font-size: 1.25rem; /* Title size */
+  font-weight: 600; /* Semi-bold */
+  color: #00ffff; /* Neon cyan for titles */
+  margin-bottom: 8px;
+}
+
+.card-description {
+  color: #ddd; /* Light gray for descriptions */
+}

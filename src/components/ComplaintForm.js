@@ -30,9 +30,10 @@ const ComplaintForm = () => {
 
   return (
     <div className="complaint-form-page">
-      <h2>Complaint Types</h2>
+      <h2>COMPLAINT</h2>
 
       <ul className="info-list">
+        <h4>NOTE</h4>
         <li>Ensure that all details regarding your complaint are accurate.</li>
         <li>Provide any supporting evidence, such as screenshots, documents, or other media.</li>
         <li>Choose the appropriate category for your complaint before proceeding.</li>

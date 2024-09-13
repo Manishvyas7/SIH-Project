@@ -1,58 +1,66 @@
-import React, { useState } from 'react';
-import './InstructionModal.css'; // Add your CSS styles here
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const InstructionModal = ({ crimeType, closeModal, navigateToForm }) => {
-  const [documents, setDocuments] = useState({
-    aadhaar: null,
-    pan: null,
-    voterId: null,
-    drivingLicense: null,
-    passport: null,
-  });
+const InstructionModal = ({ crimeType, closeModal }) => {
+  const navigate = useNavigate();
+  const [isModalActive, setIsModalActive] = useState(false); // For animation
 
-  const handleFileChange = (e) => {
-    const { name, files } = e.target;
-    if (files[0] && files[0].size <= 5242880) { // 5MB size limit
-      setDocuments((prevDocs) => ({
-        ...prevDocs,
-        [name]: files[0],
-      }));
-    } else {
-      alert('File size must be less than 5MB');
+  useEffect(() => {
+    // Activate modal after it has been rendered, for smooth animation
+    setIsModalActive(true);
+  }, []);
+
+  const handleFormRedirect = () => {
+    switch (crimeType) {
+      case 'identity-theft':
+        navigate('/theft-form'); // Redirect to identity theft form page
+        break;
+      case 'financial-crime':
+        navigate('/financial-crime-form'); // Redirect to financial crime form page
+        break;
+      case 'cyber-crime':
+        navigate('/cyber-crime-form'); // Redirect to cyber crime form page
+        break;
+      default:
+        return;
     }
   };
 
-  const handleSubmit = () => {
-    // Assuming validation passes
-    navigateToForm();
+  const handleClose = () => {
+    setIsModalActive(false);
+    setTimeout(() => {
+      closeModal();
+    }, 400); // Delay to match the animation duration
   };
 
   return (
-    <div className="modal">
-      <div className="modal-content">
-        <h2>Please keep this information ready before filling this form for {crimeType.replace('-', ' ')}</h2>
-        <ul>
-          <li className="head">Ensure all uploaded documents are below 5MB in size.</li>
-          <li className="head">Please upload valid identification documents:</li>
+    <>
+      <div
+        className={`modal-background ${isModalActive ? 'active' : ''}`}
+        onClick={handleClose}
+      />
+      <div className={`modal ${isModalActive ? 'active' : ''}`}>
+        <div className="modal-content">
+          <h2 className="head">
+            Please keep this information ready before filling your complaint
+          </h2>
           <ul>
-            <li>Aadhaar</li>
-            <li>PAN Card</li>
-            <li>Voter ID</li>
-            <li>Driving License</li>
+            <li>Aadhar Card</li>
+            <li>Voter Card</li>
             <li>Passport</li>
+            <li>Driving License</li>
           </ul>
-        </ul>
-
-        {/* Example of file inputs (optional based on requirements) */}
-        <input type="file" name="aadhaar" onChange={handleFileChange} />
-        <input type="file" name="pan" onChange={handleFileChange} />
-
-        <div className="buttons">
-          <button onClick={handleSubmit} className="btn">Proceed to Form</button>
-          <button onClick={closeModal} className="btn">Cancel</button>
+          <div className="buttons">
+            <button onClick={handleFormRedirect} className="btn">
+              Proceed to Form
+            </button>
+            <button onClick={handleClose} className="btn">
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

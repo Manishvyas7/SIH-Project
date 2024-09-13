@@ -54,7 +54,7 @@
   list-style-type: none;
   display: flex;
   justify-content: flex-end; /* Align icons to the right */
-  padding: 0;
+  padding-right: 12px;
   margin: 0;
 }
 

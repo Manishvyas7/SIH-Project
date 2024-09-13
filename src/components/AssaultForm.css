@@ -1,0 +1,55 @@
+/* AssaultForm.css */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="date"] {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus {
+    border-color: #00cccc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 204, 204, 0.5);
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #00cccc;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #009999;
+  }
+  
+  button:active {
+    background-color: #007777;
+  }
+  

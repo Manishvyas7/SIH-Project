@@ -1,17 +1,19 @@
-// Navbar.js
 import React from 'react';
-import { Link } from 'react-router-dom'; // Use Link from react-router-dom
+import { Link } from 'react-router-dom'; 
 import './Navbar.css';
-import logo from './assets/logo.jpeg';
+import logo from './assets/logo.jpeg'; 
+import Mainlogo from './assets/MainLogo.jpeg';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src={logo} alt="Your Logo" className="logo-image" />
+        <Link to="/">
+          <img src={Mainlogo} alt="Your Logo" className="logo-image" />
+        </Link>
       </div>
       <ul className="navbar-links">
-        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/">Home</Link></li> {/* Corrected path for Home */}
         <li><Link to="/track-complaint">Track Complaint</Link></li>
         <li><Link to="/our-records">Our Records</Link></li>
         <li><Link to="/awareness-camp">Awareness Camp</Link></li>
@@ -19,7 +21,7 @@ const Navbar = () => {
         {/* <li><Link to="/helpline-no">Helpline No</Link></li> */}
       </ul>
       <div className="navbar-btn">
-        <Link to="/complaint-now" className="btn">Complaint Now</Link> {/* Updated to Link */}
+        <Link to="/complaint-now" className="btn">Complaint Now</Link>
       </div>
     </nav>
   );

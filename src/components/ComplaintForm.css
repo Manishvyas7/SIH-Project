@@ -15,8 +15,17 @@
     margin-bottom: 20px;
     color: #00ffff;
   }
+  .info-list h4{
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
   
   .info-list {
+   text-align: start;
+
+    border-radius: 10px;
+    border: 1px solid aqua;
     list-style-type: disc;
     margin: 20px 0;
     padding-left: 20px;

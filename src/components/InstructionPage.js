@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 const InstructionPage = () => {
   const { crimeType } = useParams(); // Get the crime type from the URL
 
-  // Function to render instructions based on crimeType
+  // Function to render instructio5ns based on crimeType
   const renderInstructions = () => {
     switch (crimeType) {
       case 'cyber-crime':
